@@ -8,9 +8,8 @@ tags: [azure, authentication, authorization]
 
 First, let's talk about the difference between *authentication* and *authorization*.
 
-_This is some test content while i'm still figuring things out:_
 
-```rust
-let x = "something";
-println!("does syntax highlighting work?")
-```
+(will continue this)
+
+![Enterprise App](/assets/img/azure-enterprise-app-cloud-application-administrator.png){: w="700" h="400" }
+_Image caption_
