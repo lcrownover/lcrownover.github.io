@@ -21,10 +21,10 @@ timezone: America/Los_Angeles
 
 title: Lucas Crownover                          # the main title
 
-tagline: Things   # it will display as the sub-title
+tagline: Nebulous Ramblings   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Things I can't or don't want to remember
+  An attempt at a collection of knowledge bits for things I try to know about. I don't claim to be an expert at anything, so please don't get mad at me if you try to use my information and you get fired over it, or die or something. I warned you.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://lcrownover.github.io'
@@ -81,7 +81,7 @@ theme_mode:   dark
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/img/avatar.jpg
+avatar: assets/img/avatar.jpeg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
