@@ -8,7 +8,7 @@ tags: [azure, authentication, authorization]
 
 Have you ever seen one of these login forms?
 
-![Azure Oauth Sign-in](../assets/img/azure-sso-signin.png)
+![Azure Oauth Sign-in](assets/img/azure-sso-signin.png)
 _Microsoft Azure Single Sign-on_
 
 Single sign-on (SSO) is a pretty slick feature you can leverage if you make use of Azure Active Directoy. While I might write an article later about how to set this up, I want to explain something significant about Azure's SSO. 
@@ -69,7 +69,8 @@ c.AzureAdOAuthenticator.username_claim = "preferred_username"
 
 The `client_id` is easy, it's labeled as the "Application (client) ID" in the App Registration properties. 
 To obtain the `client_secret`, navigate to "Certificates & secrets".
-![Azure App Registration Secrets](../assets/img/azure-secrets-before.png)
+
+![Azure App Registration Secrets](assets/img/azure-secrets-before.png)
 
 You'll want to create a new secret using the "New client secret" button. The secret only takes two pieces of information: a description and an expiration length. 
 
@@ -79,7 +80,7 @@ Just after you've created that secret, it should be available in plaintext under
 
 Under the "Authentication" category, you'll find the area to configure your callback URL.
 
-![Azure Oauth Callback](../assets/img/azure-oauth-callback.png)
+![Azure Oauth Callback](assets/img/azure-oauth-callback.png)
 
 Enter the URL from above into the "Redirect URIs" section, replacing `{{cluster_name}}` with your cluster name. 
 
@@ -88,7 +89,7 @@ Enter the URL from above into the "Redirect URIs" section, replacing `{{cluster_
 We want Azure SSO to send our user's username back to the Jupyterhub application, so we need to configure that attribute to be returned as an optional claim. 
 Go to the "Token configuration" category and add two optional claims: one ID claim, and one Access claim, both returning `preferred_username`. I'm sure that I only need one of these, but it's just easier to return both and not worry about it.
 
-![Azure App Registration Optional Claims](../assets/img/azure-claims.png)
+![Azure App Registration Optional Claims](assets/img/azure-claims.png)
 
 ### One step further
 
@@ -96,13 +97,13 @@ Now that your Azure SSO is configured correctly, you should be able to use it to
 
 In the Enterprise Application, go to the "Users and groups" category.
 
-![Azure Enterprise Application Users and Groups](../assets/img/azure-ea-users.png)
+![Azure Enterprise Application Users and Groups](assets/img/azure-ea-users.png)
 
 Add all your users to this list.
 
 Beware, if your cluster is in production, your user list is not fully populated, and you continue, you will break access for the missing users. Navigate to the "Properties" category, and enable "Assignment required?".
 
-![Azure Enterprise Application Assignment Required](../assets/img/azure-ea-assign-req.png)
+![Azure Enterprise Application Assignment Required](assets/img/azure-ea-assign-req.png)
 
 _Tada!_ Azure is now configured for both _Authentication_ **and** _Authorization_! You can now remove the explicit user list in Jupyterhub, effectively enabling all users, since Azure will now reject users who are not explicitly added to the Enterprise Application.
 
