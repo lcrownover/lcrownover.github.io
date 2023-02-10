@@ -23,4 +23,4 @@ Oh and sometimes I climb things.
 ![Flagstone, OR](/assets/img/lucas-flagstone-color.jpg)
 _Atop the Flagstone formation in Oregon_
 
-I guess the thing nowadays is having your own Discord server, but I've never sat at the cool kids' table, so you can contact me directly using this old thing called email at [lcrownover127@gmail.com](mailto:lcrownover127@gmail.com). I'm always happy to chat.
+I guess the thing nowadays is having your own Discord server, but I've never sat at the cool kids' table, so you can contact me directly using this ancient technology called email at [lcrownover127@gmail.com](mailto:lcrownover127@gmail.com). I'm always happy to chat.
