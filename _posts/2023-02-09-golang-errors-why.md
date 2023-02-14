@@ -18,7 +18,7 @@ func getUser(username string) (string, error) {
 	fullname, err := db.Find(username)
 	if err != nil {
 		return "", fmt.Errorf("getUser: failed to find user: %w", err)
-	}	
+	}
 	return fullname, nil
 }
 
@@ -27,6 +27,7 @@ func main() {
 	fullname, err := getUser(userToFind)
 	if err != nil {
 		log.Fatalf("failed to find user %s: %w", userToFind, err)
+        os.Exit(1)
 	}
 	fmt.Println("user's full name:", fullname)
 }
@@ -55,7 +56,8 @@ func getUser(username string) (User, error) {
 	fullname, err := db.Find(username)
 	if err != nil {
 		return user, fmt.Errorf("getUser: failed to find user: %w", err)
-	}	
+	}
+    user.FullName = fullname
 	return user, nil
 }
 
@@ -83,7 +85,7 @@ func getUser(username string) (*User, error) {
 	name, err := db.Find(username)
 	if err != nil {
 		return nil, err
-	}	
+	}
 	user := &User{
 		Name:    name,
 		Friends: []*User{},
@@ -94,4 +96,4 @@ func getUser(username string) (*User, error) {
 
 If you return a pointer to `User`, you then have the option of returning `nil, err` if there's an error. This is quite a bit more straightforward, as you will never end up with partially-created structs. The issue then becomes, what happens later when I forget to write `if err != nil` and try to access `user.Name`? Panic!
 
-If you're reading this looking for a clever solution, try looking elsewhere. Or go look at Rust's error handling, cause they have their shit figured out. 
+If you're reading this looking for a clever solution, try looking elsewhere. Or go look at Rust's error handling, cause they have their shit figured out.
