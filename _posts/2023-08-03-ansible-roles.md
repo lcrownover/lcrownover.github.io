@@ -1,7 +1,7 @@
 ---
-title: Authentication and Authorization using Azure Enterprise Applications
-categories: [azure]
-tags: [azure, authentication, authorization]
+title: Ansible - Roles
+categories: [ansible]
+tags: [ansible]
 ---
 
 # Ansible - Roles
