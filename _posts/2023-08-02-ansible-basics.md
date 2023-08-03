@@ -6,17 +6,17 @@ tags: [ansible]
 
 This is a series where I talk about how I like to organize my Ansible code.
 
-Ansible - Setup \[Coming Soon\]
+- Ansible - Setup \[Coming Soon\]
 
-[Ansible - Basics]({% post_url 2023-08-02-ansible-basics %}) <- (you are here)
+- [Ansible - Basics]({% post_url 2023-08-02-ansible-basics %}) <- (you are here)
 
-[Ansible - Roles]({% post_url 2023-08-03-ansible-roles %})
+- [Ansible - Roles]({% post_url 2023-08-03-ansible-roles %})
 
-Ansible - Variables \[Coming Soon\]
+- Ansible - Variables \[Coming Soon\]
 
-Ansible - Templating \[Coming Soon\]
+- Ansible - Templating \[Coming Soon\]
 
-Ansible - Pull \[Coming Soon\]
+- Ansible - Pull \[Coming Soon\]
 
 ## Basics
 
