@@ -4,8 +4,6 @@ categories: [ansible]
 tags: [ansible]
 ---
 
-# Ansible - Roles
-
 This is a series where I talk about how I like to organize my Ansible code.
 
 Ansible - Setup \[Coming Soon\]
