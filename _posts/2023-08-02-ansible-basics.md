@@ -168,5 +168,3 @@ TODO
 <p>This page is hosted from {{inventory_hostname}}</p>
 </html>
 ```
-
-## Up Next: Roles!
